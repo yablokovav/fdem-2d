@@ -1,2 +1,140 @@
 # fdem-2d
 Frequency Domain Elasticity Modeling 2D. A finite-difference solver for monochromatic seismic waves with free-surface and PML conditions.
+# Seismic Wave Attenuation Using Metabarriers - Code Repository
+
+This repository contains the Python code accompanying the research paper on seismic wave attenuation using metabarriers. The code enables reproduction of all numerical experiments and figures presented in the study.
+
+## Prerequisites
+
+- **Python 3.9.7** (required - other versions may cause compatibility issues)
+- pip (Python package manager)
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/repository-name.git
+   cd repository-name
+   ```
+
+2. **Create and activate a virtual environment (recommended):**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Repository Structure
+
+```
+├── _1_comparison_with_analytics.ipynb      # Experiment 1: Comparison with analytical solution
+├── _2_calculations_for_horizontal_barriers.py      # Exp 2: Horizontal barrier calculations
+├── _2_visualization_for_horizontal_barriers.ipynb  # Exp 2: Visualization
+├── _3_calculations_for_vertical_barriers.py        # Exp 3: Vertical barrier calculations
+├── _3_visualization_for_vertical_barriers.ipynb    # Exp 3: Visualization
+├── _4_calculations_for_combined_barriers.py        # Exp 4: Combined barrier calculations
+├── _4_visualization_for_combined_barriers.ipynb    # Exp 4: Visualization
+├── requirements.txt                        # Python dependencies
+├── tmp/                                   # Temporary files with synthetic data
+├── figures/                               # Output directory for generated figures
+└── README.md                             # This file
+```
+
+## Execution Order
+
+To reproduce the complete study, run the scripts in the following order:
+
+### Experiment 1: Analytical Comparison
+```bash
+jupyter notebook _1_comparison_with_analytics.ipynb
+```
+Run all cells in the Jupyter notebook.
+
+### Experiment 2: Horizontal Barriers
+1. **Run calculations:**
+   ```bash
+   python _2_calculations_for_horizontal_barriers.py
+   ```
+   This generates synthetic data in the `/tmp` directory.
+
+2. **Visualize results:**
+   ```bash
+   jupyter notebook _2_visualization_for_horizontal_barriers.ipynb
+   ```
+   Run all cells to generate figures (saved in `/figures`).
+
+### Experiment 3: Vertical Barriers
+1. **Run calculations:**
+   ```bash
+   python _3_calculations_for_vertical_barriers.py
+   ```
+
+2. **Visualize results:**
+   ```bash
+   jupyter notebook _3_visualization_for_vertical_barriers.ipynb
+   ```
+
+### Experiment 4: Combined Barriers
+1. **Run calculations:**
+   ```bash
+   python _4_calculations_for_combined_barriers.py
+   ```
+
+2. **Visualize results:**
+   ```bash
+   jupyter notebook _4_visualization_for_combined_barriers.ipynb
+   ```
+
+## Data Management
+
+- **Input Data:** The `/tmp` directory contains pre-generated synthetic data files required for visualization
+- **Output Data:** All generated figures are saved in the `/figures` directory
+- **Intermediate Results:** Calculation scripts store temporary results in `/tmp`
+
+## Computational Requirements
+
+- The calculation scripts may require significant computational resources and time to complete
+- For faster execution, consider reducing mesh resolution parameters in the calculation scripts
+- Pre-calculated data in `/tmp` allows direct visualization without re-running computations
+
+## Troubleshooting
+
+1. **Version Compatibility:** Ensure Python 3.9.7 is used to avoid dependency conflicts
+2. **Memory Issues:** Some calculations are memory-intensive; close other applications if needed
+3. **Missing Dependencies:** Re-run `pip install -r requirements.txt` if import errors occur
+
+## Citation
+
+If you use this code in your research, please cite the accompanying paper:
+
+[Paper Title], [Authors], [Journal/Conference], [Year]
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Contact
+
+For questions regarding this code, please contact: [Your Email/Contact Information]
