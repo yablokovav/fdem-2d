@@ -1,4 +1,4 @@
-# fdem-2d - Frequency Domain Elasticity Modeling 2D. 
+# fdem-2d - Frequency Domain Elasticity Modeling 2D
 
 A finite-difference solver for monochromatic seismic waves with free-surface and PML conditions.
 This repository contains the Python code accompanying the research paper on seismic wave attenuation using metabarriers. The code enables reproduction of all numerical experiments and figures presented in the study.
